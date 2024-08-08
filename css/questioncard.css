@@ -1,0 +1,195 @@
+.card-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+}
+.question-card{
+    background: #000;
+    padding: 40px;
+    display: flex;
+    width: 90%;
+    height: 81%;
+    margin: auto;
+    border-radius: 20px;
+    font-family: var(--title-font);
+    align-items: center;
+}
+.first-question-card{
+    flex-direction: column;
+    align-items: unset;
+    justify-content: space-around;
+}
+
+.first-question-card .option-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.first-question-card .option-container div button{
+    width: 240px;
+    height: 80px;
+    font-size: 2rem;
+    border-radius: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+.first-question-card #option0{
+    background: var(--theme1);
+    color: #000;
+}
+.first-question-card #option1{
+    background: var(--btn_no);
+    color: #fff;
+}
+.question-card h2{
+    width: 50%;
+    font-size: 3rem;
+}
+#first-question{
+    font-size: 3.5rem;
+    width: 60%;
+}
+#first-question .highlighted-word{
+    color: var(--theme1);
+}
+.question-card{
+    position: relative;
+}
+.cross img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.question-card h2{
+    width: 40%;
+}
+
+/* Rest all Question Cards */
+.option-container{
+    width: 60%;
+}
+
+.rem-cards .question-card{
+    overflow: hidden;
+}
+
+.option-container input[type="checkbox"]{
+    display: none;
+}
+.rem-cards .option-container div{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 450px;
+    min-height: 60px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    border: 0.7px solid var(--theme1);
+    border-radius: 16px;
+    margin-top: 8px;
+    background: var(--options-bg);
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.rem-cards .option-div{
+    color: #fff;
+    cursor: pointer;
+}
+
+.rem-cards .selected-option {
+    transition: background-color .6s;
+    background-color: var(--theme1) !important; 
+}
+.rem-cards .option-container button{
+    cursor: pointer;
+    width: 185px;
+    display: block;
+    height: 55px;
+    color:#000;
+    background: var(--theme1);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 28px;
+    margin: 15px auto;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 395px) and (max-height:750px) {
+    .rem-cards div.option-div{
+        min-height: 30px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    .rem-cards .option-container button{
+        width: 100px;
+        height: auto;
+        padding: 5px 8px;
+        margin: 8px auto;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 1024px)  {
+    .question-card{
+        padding: 15px;
+
+    }
+    .question-card h2#first-question{
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .first-question-card{
+        justify-content: space-evenly;
+    }
+    .first-question-card div.option-container{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .first-question-card div.option-container div button{
+        max-width: 150px;
+        border-radius: 24px;
+    }
+
+    .rem-cards .question-card{
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+    .rem-cards .question-card h2{
+        padding: 10px;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .rem-cards .question-card .option-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .rem-cards .question-card .option-container .option-div{
+        width: 100%;
+    }
+
+    
+}
+@media (max-height:965px) and (max-width:900px){
+    .rem-cards .option-container{
+        overflow-y: scroll;        
+
+    }
+    
+}

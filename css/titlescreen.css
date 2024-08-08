@@ -1,0 +1,105 @@
+:root{
+    /* COLORS */
+    --background-color: #101115;
+    --theme1:#ED8E36;
+    --theme2_desktop: #FFE8D1;
+    --theme2_mobile: #E8C19C;
+    --btn_no: #5E5E5E;
+    ---grad: linear-gradient(109.37deg, rgba(51, 50, 50, 0.4) 10.11%, rgba(51, 50, 50, 0.1) 101.56%);
+    --menu_grad: linear-gradient(109.37deg, rgba(51, 50, 50, 0.264) 10.11%, rgba(51, 50, 50, 0.066) 101.56%);
+    --line: #535353;
+    --options-bg:#191A1D;
+
+
+    /* FONT TYPES */
+    --title-font:'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    background-color: var(--background-color);
+}
+.menubar{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 465px;
+    background: var(--menu_grad);
+    margin: 20px auto;
+    justify-content: center;
+    padding: 16px 20px;
+    border-radius: 20px;
+}
+
+.line{
+    width: 30.38px;
+    height: 1px;
+    border: 1px 0px 0px 0px;
+    background-color: var(--line);
+    transform: rotate(90deg);
+}
+.logo img{
+    width: 143.6px;
+    height: 60px;
+}
+.menu-btn img{
+    width: 24px;
+    height: 24px;
+}
+.menubar button{
+    background: var(--theme1);
+    border: 0px solid transparent;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.title_screen{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    height: 70vh;
+    justify-content: center;
+    font-family: var(--title-font);
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title_screen .main_title{
+    font-size: 4rem;
+    font-weight: 700;
+    width: fit-content;
+}
+.title_screen .sub_title{
+    color: var(--theme2_desktop);
+    font-size: 2rem;
+}
+
+@media(max-width:768px){
+    .menubar{
+        justify-content: space-around;
+        width: 80%;
+    }
+    .menubar button, .line{
+        display: none;
+    }
+
+    .title_screen .main_title{
+        font-size: 1.5rem;
+    }
+    .title_screen .sub_title{
+        font-size: 1.2rem;
+    }
+}
+
+
